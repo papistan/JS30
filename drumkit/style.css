@@ -1,0 +1,36 @@
+ html {
+	height: 100%;
+	margin: 0;
+	font-family: helvetica;
+	color: white;
+}
+
+body {
+
+	background-image: url("https://ak1.picdn.net/shutterstock/videos/17413291/thumb/1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.keys {
+	margin-top: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.key {
+	border: 2px solid;
+	padding: 15px;
+	width: 5%;
+}
+
+kbd {
+	font-size: 50px;
+	display: block;
+}
+
+.sound {
+	font-size: 1em; 
+}
