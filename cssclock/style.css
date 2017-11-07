@@ -29,9 +29,23 @@ body {
 .hand {
 	background-color: red;
 	height: .3rem;
-	width: 14rem;
+	width: 50%;
 	position: absolute;
 	top: 50%;
 	transform-origin: 100%;
-	transform: rotate(5deg);
+	transform: rotate(90deg);
+	transition: all 0.01s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+	
+}
+
+.minute-hand {
+
+}
+
+.second-hand {
+	
 }
