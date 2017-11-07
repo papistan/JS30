@@ -1,3 +1,5 @@
+
+
 body {
 	background-color: skyblue;
 	text-align: center;
@@ -17,7 +19,8 @@ h2 {
 
 img {
 	border-style: solid;
-	border-color: yellow;
-	border-width: 30px;
+	border-color: var(--base);
+	border-width: var(--spacing);
 	margin-top: 5%;
+	filter: blur(var(--blur));
 }
