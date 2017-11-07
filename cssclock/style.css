@@ -32,4 +32,6 @@ body {
 	width: 14rem;
 	position: absolute;
 	top: 50%;
+	transform-origin: 100%;
+	transform: rotate(5deg);
 }
