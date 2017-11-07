@@ -1,0 +1,23 @@
+body {
+	background-color: skyblue;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 1%;
+	font-size: 3em;
+	font-family: helvetica;
+	color: white;
+}
+.controls {
+	font-size: 3em;
+	font-family: helvetica;
+	color: white;
+}
+
+img {
+	border-style: solid;
+	border-color: yellow;
+	border-width: 30px;
+	margin-top: 5%;
+}
