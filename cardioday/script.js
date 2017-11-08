@@ -17,24 +17,56 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-      function filter(list) {
-           born = list.filter(item => item.year > 1499 && item.year < 1599)
-           console.table(born.map(item => item.first))
-      }
-      filter(inventors)
+      // function filter(list) {
+      //      born = list.filter(item => item.year > 1499 && item.year < 1599)
+      //      console.table(born.map(item => item.first))
+      // }
+      // filter(inventors)
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+       // const names = inventors.map(inventor => inventor.first + " " + inventor.last)
+       // console.table(names)
+
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+
+      // const lists = inventors.sort(function(a, b){
+      //        return b.year - a.year
+      // } )
+      // console.table(lists)
+
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+      // const years = inventors.reduce(function(value, item){
+      //       return value + (item.passed - item.year)
+      // }, 0)
+      // console.log(years)
+
     // 5. Sort the inventors by years lived
+
+      // const sorted = inventors.sort(function(a, b){
+      //      return (a.passed - a.year) - (b.passed - b.year)
+      // })
+      // console.table(sorted)
+
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+       // const category = document.querySelector('.mw-category');
+    // const links = Array.from(category.querySelectorAll('a'));
+    // const de = links
+    //             .map(link => link.textContent)
+    //             .filter(streetName => streetName.includes('de'));
+
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    // 8. Reduce Exercise
+
+      
+          
+          // console.table(people.sort(function(a, b){
+          //  return  (a.slice(0, a.indexOf(','))) + (b.slice(0, b.indexOf(',')))
+          // }))
     // Sum up the instances of each of these
 
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
