@@ -1,0 +1,21 @@
+html, body {
+	background-color: purple;
+}
+
+.search-form {
+	text-align: center;
+	margin-top: 10%;
+	font-size: 1em;
+	color: white;
+	font-family: helvetica;
+	
+}
+
+.search {
+	height: 5%;
+	width: 20%;
+}
+
+.suggestions {
+	list-style-type: none;
+}
