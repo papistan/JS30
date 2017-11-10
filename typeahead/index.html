@@ -44,19 +44,25 @@
 		})
 	}
 
+	function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+	}
+
 	const inputTag = document.querySelector('.search')
 	const suggestions = document.querySelector('.suggestions')
 	
 	function displayMatches(){
 		const matchArray = findMatches(this.value, cities)
-		const html = matchArray.map(function(place){ 
-		return `
+		const html = matchArray.map(place =>{
+			const regexd = new RegExp(this.value, 'gi')
+			const cityName = place.city.replace(regexd, `<span class="hl">${this.value}</span>`)
+			return `
 				<li> 
-					<span class="name">${place.city}, ${place.state}</span>
-					<span class="population">${place.population}</span>
+					<span class="name">${cityName}, ${place.state}</span>
+					<span class="population">${numberWithCommas(place.population)}</span>
 				</li>
-		`;
-		}).join('');
+			`;
+			}).join('');
 		suggestions.innerHTML = html;
 	}
 
