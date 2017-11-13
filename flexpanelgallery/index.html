@@ -82,6 +82,7 @@
 
      .panel.open {
       font-size:40px;
+      flex: 5;
     }
 
      .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
@@ -123,7 +124,22 @@
 
 
   <script>
-  	
+  	const panels = document.querySelectorAll('.panel')
+    
+    function toggleOpen(){
+      this.classList.toggle('open')
+    }
+
+    function openActive(e){
+      if(e.propertyName === 'flex-grow') { 
+        this.classList.toggle('open-active')
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen))
+    panels.forEach(panel => panel.addEventListener('transitionend', openActive))
+
+
   </script>
 
 
