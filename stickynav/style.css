@@ -5,9 +5,11 @@ html {
   font-size: 20px;
   font-weight: 200;
 }
+
 body {
   margin: 0;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -48,6 +50,11 @@ nav {
   z-index: 1;
 }
 
+.fixed-nav {
+  position: fixed;
+  box-shadow: 0 5px rgba(0,0,0,0.1)
+}
+
 nav ul {
   margin: 0;
   padding:0;
@@ -63,8 +70,12 @@ nav li {
   align-items: center;
 }
 
-li.logo {
-  max-width:0;
+nav li:hover {
+  background: purple;
+}
+
+nav li.logo {
+  max-width: 0;
   overflow: hidden;
   background: white;
   transition: all .5s;
@@ -74,6 +85,10 @@ li.logo {
 
 li.logo a {
   color:black;
+}
+
+nav li.logo.logo-show {
+  max-width: 500px;
 }
 
 nav a {
