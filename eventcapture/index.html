@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Capture</title>
+</head>
+<body>
+
+	<style>
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after { box-sizing: inherit; }
+
+		div {
+			width:100%;
+    	padding:100px;
+		}
+
+		.one {
+			background: thistle;
+		}
+
+		.two {
+    	background:mistyrose;
+  	}
+  	
+  	.three {
+    	background:coral;
+  	}
+
+	</style>
+	
+	<div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+
+	<script>
+		const divs = document.querySelectorAll('div')
+
+		function logText(e) {
+			console.log(this.classList.value)
+			e.stopPropagation()
+		}
+
+		divs.forEach(div => 
+		  div.addEventListener('click', logText)
+		)
+	</script>
+
+</body>
+</html>
